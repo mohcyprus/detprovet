@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta http-equiv="pragma" content="no-cache">
+    <title>Flickr SPA Prov</title>
+  </head>
+  <body>
+    <div class="searchBar">
+      <div>
+        <input type="text" name="searchField" id="searchField" tabindex="1" placeholder="Sökord..." required>
+        <input type="button" name="searchBtn" id="searchBtn" value="Sök" onclick="newSearchRequest();" tabindex="2">
+        <input type="button" name="galleryBtn" id="galleryBtn" value="Visa Galleri (0)" onclick="viewGallery();" >
+      </div>
+    </div>
+    <div id="mainView">
+      <!-- Display photos corresponding to the search in this area -->
+    </div>
+    <div class="actionBar">
+      <div>
+        <input type="button" name="loadmoreBtn" id="loadmoreBtn" value="Ladda Mer" onclick="loadMoreRequest();">
+      </div>
+    </div>
+    <div id="galleryDisplay">
+      <div>
+      <!-- Display final gallery in this area  -->
+      </div>
+      <span class="close" onclick="closeSingle('2')" >  &times;</span>
+    </div>
+    <div id="shadow1"  onclick="closeSingle('1')"></div>
+    <div id="shadow2"  onclick="closeSingle('2')"></div>
+    <div id="popup">
+      <div id="continer" class="fadeX ifnone">
+        <span id="tempImage" ></span>
+        <span class="close" onclick="closeSingle('1')" >  &times;</span>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

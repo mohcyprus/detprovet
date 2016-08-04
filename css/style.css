@@ -1,0 +1,252 @@
+html, body, div, span, 
+a, img, form{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	vertical-align: baseline;
+	font-family: arial, verdana;
+	outline: none;
+}
+div, span {-webkit-user-select: none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	user-select: none;
+
+}
+input: fucos, input{
+	outline: none;button
+}
+input[type="button"]{
+	cursor: pointer;
+}
+body {
+	color: black;
+	background: #fff;;
+	height: 100%;
+}
+
+/*    Main Styles    */
+
+body {
+	color: #444;
+}
+html {
+	height: 100%;
+}
+
+a, a: visited {
+	text-decoration: none;
+}
+a: hover, a: active {
+	text-decoration: none;
+}
+/* Search bar at buttom of the page*/
+div.searchBar,
+div.actionBar {
+	position: absolute;	
+	width: 100%;
+	box-shadow: 0px 0px 5px 3px #C9C9C9;
+	height: 9.7%;
+	border-bottom: 1px solid #B1B1B1;
+	background-color: white;
+	top: 0;	
+}
+
+div.searchBar > div,
+div.actionBar > div {
+	height: auto;
+	width: 60%;
+	margin: 0 auto;
+	position: relative;
+}
+div.searchBar > div input,
+div.actionBar > div > input {
+	display: inline-block;
+	margin-top: 1.5%;
+	font-size: 4vh;
+}
+div.searchBar > div input[type="text"] {
+	width: 55%;
+	border: 2px solid #959692;
+	background-color: #ffc;
+	border-radius: 3px;
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	float: left;
+	text-indent: 2%;
+}
+div.searchBar > div input[type="text"]:focus {
+	border-color: #5ec7cd;
+}
+div.searchBar > div input[type="button"],
+div.actionBar > div > input {
+	cursor: pointer
+	border: none;background-color: #eee;
+	border-radius: 3px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border: 2px solid #959692;
+	border-left: 1px solid #b5b6b2;
+}
+
+div.searchBar > div input[type="button"]:nth-child(2) {
+	width: 15%;
+}
+div.searchBar > div input[type="button"]:last-child,
+div.actionBar > div > input {
+	border: 2px solid #959692;
+	border-radius: 3px;
+}
+div.actionBar {
+	top: inherit;bottom: 0;
+}
+div.actionBar > div > input {
+	display: none;
+	margin: 1.5% auto 0 auto;
+	width: 20%;
+}
+
+/* Results Frame Area*/
+div#mainView {
+	height: 78%;
+	width: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	position: absolute;
+	top: 12%;
+}
+div#mainView > div,
+div#galleryDisplay > div > div {
+	width: 12.9vw;
+	height: 10vw;
+	margin: 0.3vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	border: 3px solid #fff;
+	border-radius: 3px;
+	cursor: pointer
+}
+div#galleryDisplay > div > div {
+	width: 13.3vw;
+	height: 22vh;
+}
+div#galleryDisplay > div {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+}
+div#galleryDisplay {
+	height: 88vh;
+	width: 88vw;
+	z-index: 4;
+	padding: 1vh 1vw;
+	left: 5vw;top: 5vh;
+	position: relative;
+	display: none;
+	border: 1px solid #eee;
+	background-color: #fff;
+}
+
+div#mainView > div.active {	
+	border-color: red;
+	position: relative;
+	box-shadow: none;
+}
+div#mainView > div.active > span:first-child {
+	display: block;
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	left: 0;
+	width: 0px;
+	height: 0px;
+	border-bottom: 2vh solid red;
+	border-right: 2vh solid transparent;
+	visibility: visible;
+}
+div#mainView > div > span {
+	visibility: hidden;
+}
+div#mainView > div.active > span:last-child {
+	display: block;
+	position: absolute;
+	z-index: 0;
+	bottom: 0;right: 0;
+	width: 100%;height: 4vh;
+	opacity: 0.5;
+	font-size: 2.2vh;
+	background-color: #000;
+	border-top: 1px solid #777;
+	visibility: visible;
+	color: #eee;
+	text-align: center;
+	line-height: 170%;
+}
+div#mainView > div.active > span:last-child:empty {
+	display: none;
+}
+div#continer{
+	width: auto;
+	height: auto;
+	padding: 3vh;
+	background-color: #eee;
+	z-index: 6;
+	border-radius: 5px;
+	position: fixed;
+	max-width: 50%;
+	max-height: 80%;
+	display: none;
+}
+div.setopacity {
+	opacity: 1;
+}
+div#continer > span:first-child{
+	position: relative;
+	display: block;
+}
+div#continer > span:first-child > img {
+	width: auto;
+	height: auto;
+	max-height: 80vh;
+	max-width: 50vw;
+}
+span.close {
+	cursor: pointer;
+	display: block;
+	left: -1.5vh;
+	top:  -1.5vh;
+	border-radius: 16px;
+	background-color: #ddd6d6;
+	text-align: center;
+	font-size: 200%;
+	position: absolute;
+	width: 3vh;
+	height: 3vh;
+	line-height: 3vh;
+	color: brown;
+}
+#shadow1,#shadow2 {
+	background: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 5;
+}
+#shadow2 {
+	z-index: 3;
+	opacity: 0.7;
+} 
+body.loading {
+	cursor: wait;
+}
